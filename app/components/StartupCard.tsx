@@ -5,7 +5,7 @@ import Image from "next/image";
 const StartupCard =
     ({post} : {post: StartupTypeCard}) => {
 
-    const {_createdAt, views, author, _id, image, category, description, title} = post;
+    const {_createdAt, views, author, _id, image, description, title} = post;
 
         return (
             <li className={`startup-card group`}>
