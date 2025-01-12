@@ -46,7 +46,7 @@
   }
 
   .pink_container {
-    @apply w-full bg-primary min-h-[530px] lg:bg-[url('/bg.png')] lg:bg-no-repeat lg:bg-cover sm:pattern flex justify-center items-center flex-col py-10 px-6;
+    @apply w-full bg-primary min-h-[530px] bg-[url('/bg.png')] bg-cover bg-no-repeat bg-center flex justify-center items-center flex-col py-10 px-6;
   }
 
   .tag {
@@ -122,7 +122,7 @@
   }
 
   .search-input {
-    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-black-100 w-full h-auto outline-none;
+    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-zinc-500 w-full h-auto outline-none;
   }
 
   .search-btn {
@@ -131,7 +131,7 @@
 
   /* startupcard */
   .startup-card {
-    @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
+    @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-secondary hover:bg-primary-100;
   }
 
   .startup-card_date {

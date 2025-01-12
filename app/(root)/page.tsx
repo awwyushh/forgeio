@@ -1,6 +1,8 @@
 import SearchForm from "@/app/components/SearchForm";
 import StartupCard from "@/app/components/StartupCard";
 import Transition from "@/app/components/StartupCardAnim";
+import {client} from "@/sanity/lib/client";
+import {startups_query} from "@/sanity/lib/queries"
 
 export default async function Home({searchParams}:{
     searchParams: Promise<{query?: string}>
@@ -8,19 +10,7 @@ export default async function Home({searchParams}:{
 
   const query = (await searchParams).query;
 
-  const posts = [{
-      _createdAt: "2022-01-01",
-      views: 100,
-      author: {_id: 1, name:"Ayush"},
-      _id:1,
-      description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      image: "https://images.unsplash.com/photo-1541562232579-512a21360020?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Tech",
-      title: "Gaming won't stop!",
-  },
-  ]
-
-
+  const posts = await client.fetch(startups_query);
 
   return (
         <>
